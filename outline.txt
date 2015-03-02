@@ -45,6 +45,18 @@ s: want it to be easy to develop web apps.  they solve everything for you, as lo
 
 
 
+
+Simple Example
+angular.module('directivesModule').directive('mySharedScope', function () {
+    return {
+        template: 'Name: {{customer.name}}<br /> Street: {{customer.street}}'
+    };
+});
+
+
+
+
+
 Slide 6
 # React History 
 
@@ -132,6 +144,7 @@ https://peterkaptein.files.wordpress.com/2013/12/slide2.png
 Standard MVC
 http://fluxxor.com/images/mvc-simple.png
 http://fluxxor.com/images/mvc-complex.png
+http://qph.is.quoracdn.net/main-qimg-4df9f3cc3a2284fda922ae851279901c?convert_to_webp=true
 
 Unidirectional Flow
 http://fluxxor.com/images/flux-simple.png
@@ -173,6 +186,12 @@ Angular however, we know for sure that Angular 2 is a complete rewrite with no c
 
 Summary
 Both are great frameworks.  One is a full featured MVC, one is just the V.  
+
+Any AJAX capabilities whatsoever
+Any form of a data layer
+Promises
+Any application framework at all
+Any idea how implement the above
 
 
 Links:
@@ -221,6 +240,15 @@ s:
 
 Slide 4
 React
+We built React to solve one problem: building large applications with data that changes over time. To do this, React uses two main ideas.
+
+Simple
+Simply express how your app should look at any given point in time, and React will automatically manage all UI updates when your underlying data changes.
+
+Declarative
+When the data changes, React conceptually hits the "refresh" button, and knows to only update the changed parts.
+
+
 
 
 Background - what each of them is
@@ -339,4 +367,5 @@ http://jlongster.com/Removing-User-Interface-Complexity,-or-Why-React-is-Awesome
 
 Podcast:
 http://codewinds.com/podcast/004.html
+
 

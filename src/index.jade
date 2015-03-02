@@ -16,16 +16,202 @@ html(lang="en")
                                 +"user-scalable=no")
  
     link(rel='shortcut icon' href='/public/favicon.png')
+    link(rel="stylesheet" href="/public/zenburn.css")
     link(rel="stylesheet" href="/public/index.css")
     link(rel="stylesheet" href="/public/reveal.css")
-    link(rel="stylesheet" href="/public/league.css")
- 
+    link(rel="stylesheet" href="/public/black.css")
+
   body
     .reveal
       .slides
         section(data-background-size="contain") 
           h1 Angular vs React
-          <p>by Jonathan Keam</p>
+          p by Jonathan Keam
+          img(src='http://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/AngularJS_logo.svg/695px-AngularJS_logo.svg.png')
+          img(src='http://moduscreate.com/wp-content/uploads/2014/03/react-opti.png')
+
+        section(data-background-size="contain") 
+          h2 Outline
+          ol 
+            li Scope
+            li General Info
+            li Angular
+            li React
+            li Basic Code
+            li Simple Demo
+            li Data Flow
+            li Performance
+            li Support
+            li Future
+            li Summary
+            li Questions
+
+        section(data-background-size="contain") 
+          h2 Scope
+          p Not meant to be a deep dive into either technology.  Just compare and constrast features and spent a bit more time on React as it's the new guy on the block.
+
+        section(data-background-size="contain") 
+          h2 Different Things
+          img(src='http://blog.silviaskingdom.com/wp-content/uploads/2014/01/Comparing_Apples_to_OrangesjsxDetail.png')
+
+        section(data-background-size="contain") 
+          h1 Angular
+          blockquote &ldquo; to enable web-designers (non-programmers) to build simple app like websites &rdquo;
+            footer 
+              cite - Misko Hevery
+          p &ldquo; AngularJS lets you extend HTML vocabulary for your application. The resulting environment is extraordinarily expressive, readable, and quick to develop. &rdquo;
+
+        section(data-background-size="contain") 
+          h2 Angular History
+          ul
+            li Originally developed by Misko Hevery and Adam Abrons, Brat Tech in 2009
+            li Open sourced and maintained by Googlers Misko Hevery, Igor Minar and Vojta Jina
+
+        section(data-background-size="contain") 
+          h2 Angular Overview
+          h3 MVC Framework
+          ol Notable Features
+            li Two-way data binding
+            li Directives
+            li Modules
+            li Templates
+            li DI
+
+        section(data-background-size="contain") 
+          h2 React
+          p React is just the V
+          p &ldquo; We built React to solve one problem: building large applications with data that changes over time. To do this, React uses two main ideas. &rdquo;
+
+        section(data-background-size="contain") 
+          h3 Simple
+          p Simply express how your app should look at any given point in time, and React will automatically manage all UI updates when your underlying data changes.
+
+        section(data-background-size="contain") 
+          h3 Declarative
+          p When the data changes, React conceptually hits the "refresh" button, and knows to only update the changed parts.
+
+        section(data-background-size="contain") 
+          h2 React History
+          ul
+            li Born out of frustration with "cascading updates" and long ramp up times
+            li Initially prototype by Jordan Walke, used ideas from XHP (internal PHP tool)
+            li Used internally but tightly integrated into their codebase
+            li After Instagram acquired, Pete Hunt did work of breaking it out into it's own library to build Instagram apps, open sourced it 2013
+
+        section(data-background-size="contain") 
+          h2 Angular Example
+          pre
+            code(class='javascript' data-trim contenteditable) angular.module('directivesModule', []).directive('coolDirective', 
+              | function() {
+              |     return {
+              |        template: 'Name: &#123;&#123;customer.name&#125;&#125;'
+              |     };
+              | });
+
+        section(data-background-size="contain") 
+          h2 React Example
+          pre
+            code(class='javascript' data-trim contenteditable) /** @jsx React.DOM */
+              | var HelloMessage = React.createClass({
+              |     render: function() {
+              |        return &lt;div&gt;Hello {this.props.name}&lt;/div&gt;;
+              |     };
+              | });
+              | React.renderComponent(&lt;HelloMessage name="John" /&gt;, document.body);
+
+        section(data-background-size="contain") 
+          h2 Simple Demo
+          a(href='http://draco.io/angular-react/rating/') Angular
+          br
+          a(href='http://draco.io/angular-react/rating-react/') React
+          br
+          a(href="https://github.com/jkeam/angularjs-tutorials") Walkthrough
+
+        section(data-background-size="contain") 
+          h2 Data Flow
+          h3 Two Way Data Binding
+          img(src="https://peterkaptein.files.wordpress.com/2013/12/slide2.png" style="max-height:500px;")
+
+        section(data-background-size="contain") 
+          h2 Data Flow
+          h3 Simple MVC
+          img(src="http://fluxxor.com/images/mvc-simple.png")
+
+        section(data-background-size="contain") 
+          h2 Data Flow
+          h3 Complex MVC
+          img(src="http://fluxxor.com/images/mvc-complex.png")
+
+        section(data-background-size="contain") 
+          h2 Data Flow
+          h3 Realistic MVC
+          img(src="http://qph.is.quoracdn.net/main-qimg-4df9f3cc3a2284fda922ae851279901c?convert_to_webp=true")
+
+        section(data-background-size="contain") 
+          h2 Data Flow
+          h3 Simple Unidirectional Flow
+          img(src="http://fluxxor.com/images/flux-simple.png")
+
+        section(data-background-size="contain") 
+          h2 Data Flow
+          h3 Complex Unidirectional Flow
+          img(src="http://fluxxor.com/images/flux-complex.png" style="max-height:500px;")
+
+        section(data-background-size="contain") 
+          h2 Performance 
+          h3 Angular
+          a(href="http://plnkr.co/edit/YnF7Vn?p=info") Source 
+          img(src="http://www.williambrownstreet.net/blog/wp-content/uploads/native-angularjs-chromedev.png")
+
+        section(data-background-size="contain") 
+          h2 Performance
+          h3 React
+          a(href="http://plnkr.co/edit/6zfFXU?p=info") Source
+          img(src="http://www.williambrownstreet.net/blog/wp-content/uploads/with-react-chromedev.png")
+
+        section(data-background-size="contain") 
+          h2 Support
+          h3 Angular
+          p "AngularJS: http://ngmodules.org/ currently shows an impressive number of 870 modules. Learning resources in the form of courses are available for example form codeschool, egghead and udemy. Lots of companies build their apps with AngularJS. Support channels can be found on the AngularJS website under 'Discuss'."
+          br
+          p by Adrian Philipp, 16.09.2014 07:28
+          div(style='font-size:16px;') Companies/Apps using AngularJS: Google, Youtube on PS3, Vevo, and
+          a(href="https://builtwith.angularjs.org/" style='font-size:16px;') more
+
+        section(data-background-size="contain") 
+          h2 Support
+          h3 Angular
+          p "ReactJS: http://react-components.com/ is growing but with under 100 components not quite there yet. The community compared to AngularJS isn’t too big but with Facebook, Instagram, Github and Yahoo (migrating Yahoo! Mail from YUI to ReactJS) there are more companies using it and we see lots of traction. See the support channels when looking for help."
+          br
+          p by Adrian Philipp, 16.09.2014 07:28
+          p(style='font-size:16px;') Companies/Apps using React: Facebook, Instagram, Vimeo, Github, Yahoo, Khan Academy, Netflix, Airbnb, Sony, Atlassian, CodeAcademy 
+
+        section(data-background-size="contain")
+          h2 Future
+          a(href="https://github.com/reactjs/react-future") React Future
+          br
+          p React is still growing and is very young.  It's too early to tell if future breaking changes are coming down the pipe.  Working on compiling React to native (Facebook Paper).
+
+          a(href="http://eisenbergeffect.bluespire.com/all-about-angular-2-0/") Angular Future
+          br
+          p Angular, we know for sure that Angular 2 is a complete rewrite with no clear migration path.  Controllers have been removed, there is a new language called AtScript which they highly recommend in lieu of JavaScript, as well as many other breaking things.
+
+        section(data-background-size="contain")
+          h2 Summary
+          h3 Angular
+          p Angular is a full featured MVC Framework.  Angular tries and solve all the things for you, and if you do everything the Angular way, things work.
+          h3 React
+          p React is only the view layer, but it does this very well, cleanly and fast.  The core building block behind React are self-contained components.  React makes recommendations on how to build the application, but makes no requirements.
+
+        section(data-background-size="contain")
+            h1 Questions
+
+    script(src="./public/index.js")
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/highlight.min.js')
+    script hljs.initHighlightingOnLoad();
+
         section(data-background-size="contain")
             h1 Questions
     script(src="./public/index.js")
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/highlight.min.js')
+    script hljs.initHighlightingOnLoad();
