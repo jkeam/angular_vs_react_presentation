@@ -1,0 +1,342 @@
+Outline
+----------
+React vs Angular
+
+Slide 1
+
+# Angular vs React
+   by Jonathan Keam
+
+
+Slide 2
+# Apples and Oranges?
+Angular and React are very different
+
+s: 
+not a fair comparison very different things with different goals in mind.
+
+
+Slide 3
+# Angular History
+
+* Originally developed by Misko Hevery and Adam Abrons, Brat Tech
+* Open sourced and maintained by Googlers Misko Hevery, Igor Minar and Vojta Jina
+
+
+Slide 4
+# Angular
+* MVC Framework
+* Notable Features
+  1. Two Way Data Binding
+  2. Directives
+  3. Modules
+  4. Templates
+  5. Dependency Injection
+  6. Etc.
+
+
+Slide 5
+# Angular Motivation
+
+  "to enable web-designers (non-programmers) to build simple app like websites" -Misko Hevery
+
+
+s: want it to be easy to develop web apps.  they solve everything for you, as long as you do it the angular way.   
+
+
+
+Slide 6
+# React History 
+
+* Initially prototype by Jordan Walke, used ideas from XHP (internal PHP tool)
+* Used internally but tightly integrated into their codebase
+* After Instagram acquired, Pete Hunt did work of breaking it out into it's own library to build Instagram apps, open sourced it 2013
+
+
+Slide 7
+# React
+* Not a framework, only a library
+* Best described as only the V in MVC
+* Notable Features
+  1. Virtual Dom 
+  2. Server Rendering
+  3. Descriptive Warning Messages
+  4. Custom Event System
+  5. Immutability Instead Of Observing
+  6. Etc.
+
+
+
+Slide 8
+# React Motivation
+* Only the view layer with Architectural suggestions
+* Born out of frustration with "cascading updates" and long ramp up times
+* Every change reuses initial render functionality
+
+
+s: 
+talk about cascading updates and hard to reason about state
+long ramp up times for new developers from weeks to same day
+use same code for initial as diff
+virtual dom
+
+
+
+Slide
+Simpliest React Example
+
+/** @jsx React.DOM */
+var HelloMessage = React.createClass({
+  render: function() {
+    return <div>Hello {this.props.name}</div>;
+  }
+});
+React.renderComponent(<HelloMessage name="John" />, document.body);
+
+
+slide 9
+code
+
+Simple Demo
+Angular
+http://draco.io/angular-react/rating/
+React
+http://draco.io/angular-react/rating-react/
+
+Walkthrough 
+https://github.com/petehunt/angularjs-tutorials/tree/master/directives
+https://github.com/jkeam/angularjs-tutorials
+
+
+s: 
+key of react are components
+  and uses composition to extend functionality, where you mixin in classes
+  you don't listen to events, you let react: 
+    rerender a virtual dom
+    diff with existing dom
+    batch updates and touch real dom
+  use other libs:
+    for things like server communication
+    testing
+  its just javascript
+Angular u have built in directives for iteration and in react it's just JS
+from:
+  http://www.quora.com/Pete-Hunt/Posts/Facebooks-React-vs-AngularJS-A-Closer-Look
+
+
+Data Flow
+Flux
+Two Way Data Binding
+https://peterkaptein.files.wordpress.com/2013/12/slide2.png
+
+Standard MVC
+http://fluxxor.com/images/mvc-simple.png
+http://fluxxor.com/images/mvc-complex.png
+
+Unidirectional Flow
+http://fluxxor.com/images/flux-simple.png
+http://fluxxor.com/images/flux-complex.png
+
+
+Slide 10 
+Performance
+Micro performance benchmark
+Angular Example
+  http://plnkr.co/edit/YnF7Vn?p=info
+  http://www.williambrownstreet.net/blog/wp-content/uploads/native-angularjs-chromedev.png
+React
+  http://plnkr.co/edit/6zfFXU?p=info
+  http://www.williambrownstreet.net/blog/wp-content/uploads/with-react-chromedev.png
+
+
+Support
+
+AngularJS: http://ngmodules.org/ currently shows an impressive number of 870 modules. Learning resources in the form of courses are available for example form codeschool, egghead and udemy. Lots of companies build their apps with AngularJS (Youtube on PS3, vevo). Support channels can be found on the AngularJS website under 'Discuss'.
+
+ReactJS: http://react-components.com/ is growing but with under 100 components not quite there yet. The community compared to AngularJS isn’t too big but with Facebook, Instagram, Vimeo, Github, Yahoo (migrating Yahoo! Mail from YUI to ReactJS), Khan Academy, Netflix, Airbnb, Sony, Atlassian, CodeAcademy there are more companies using it and we see lots of traction. See the support channels when looking for help.
+
+by Adrian Philipp, 
+16.09.2014 07:28
+
+
+
+
+Future
+
+React is still growing and is very young.  Too early to tell if future breaking changes are coming down the pipe.
+https://github.com/reactjs/react-future
+
+Angular however, we know for sure that Angular 2 is a complete rewrite with no clear migration path.  Controllers have been removed, there is a new language called AtScript with they highly recommend to use, as well as other things.
+
+
+
+
+Summary
+Both are great frameworks.  One is a full featured MVC, one is just the V.  
+
+
+Links:
+http://blog.liip.ch/archive/2014/09/16/angularjs-vs-reactjs-for-large-web-applications.html
+http://www.williambrownstreet.net/blog/2014/04/faster-angularjs-rendering-angularjs-and-reactjs/
+http://eisenbergeffect.bluespire.com/all-about-angular-2-0/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+React vs Angular
+React is more like just an angular directive
+
+
+s: 
+  Originally developed by Misko Hevery and Adam Abrons of Brat Tech in 2009 for their startup.  The startup, which was an online JSON storage service, eventually failed, and they decided to open source their software, calling is AngularJS.
+  Misko Hevery, who works at Google continue to maintain it, along with other Googlers, Igor Minar and Vojta Jina.
+
+  Is a full MVC framework
+  Has things like:
+    
+
+
+Slide 4
+React
+
+
+Background - what each of them is
+  1.  Angular is a full fledged MVC framework
+  Originally developed in 2009
+
+  It solves everything, on how to builds apps
+  Currently on 1.3.24
+
+  Key features
+  two day data binding
+  directives
+  modules
+  templates
+  DI
+
+  React is just the V
+  http://facebook.github.io/react/blog/2013/06/05/why-react.html
+  It's simply components
+
+
+  Why react
+    cascading updates -> two way data binding
+    conceptually -> state change, mentally rerender everything
+        essentially idempotent, not like a statemachine holding state 
+        originally did this by just regenerating entire buddy lists when buddies logged on.  did this for a while.  but can't do this for everything b/c its not performant enough.
+        jordan walke build a prototype to make this more efficient.
+        like and comment completely powered by browser side instead of server side.  did analytics, and user feedback was identical.  so no change noticed.
+    when instagram joined, pete hunt, convinced them to break out react and open source it in 2013.  
+    at first hated it b/c html markup inside of js.  said it was a huge step backwards.  this idea came from xhp.  desugar markup to function calls.  allows nice composition of components.
+    components is the separation that react strives for, not markup and behavior.
+    components are completely self contained.
+
+    whats diff about react components.  the nature in which you describe it.
+
+
+  virtual dom - now have standalone virtual dom.  lots of other frameworks are following.
+  server rendering
+  descriptive warning messages
+  custom event system
+  immutablility instead of observing
+
+
+  native
+
+
+Typical Stack
+  Angular - all bundled
+  list tools here
+
+  React   - part of the modular approach, where you pull in various tools and libs
+  list tools here
+
+
+Deep dive of each
+  how does react work
+  how does angular work
+
+  architecture
+  performance
+  simplicity
+  one way vs two way data binding
+
+Example App 
+  https://github.com/petehunt/angularjs-tutorials/
+
+Code Comparison
+  http://wiredcraft.com/blog/why-we-may-ditch-angularjs-for-react/
+  http://www.quora.com/Pete-Hunt/Posts/Facebooks-React-vs-AngularJS-A-Closer-Look
+  https://www.codementor.io/reactjs/tutorial/react-vs-angularjs
+
+  https://www.airpair.com/angularjs/posts/angular-vs-react-the-tie-breaker
+
+Community
+
+
+Support
+  ide: http://blog.jetbrains.com/webstorm/2014/10/webinar-recording-a-deep-dive-into-webstorm-9s-new-features/
+
+
+Who uses
+  react: Khan Academy,[6] Netflix,[7] Yahoo,[8] Airbnb,[9] Sony,[10] Atlassian[11] and others.
+
+  angular: youtube on ps3, msnbc, vevo
+  build with angular: https://builtwith.angularjs.org/
+
+Future
+
+
+Pros and Cons of each
+  things angular is doing diffently b/c of react
+
+
+Conclusion
+
+
+
+
+
+Links:
+History
+http://thenewstack.io/javascripts-history-and-how-it-led-to-reactjs/
+
+http://facebook.github.io/react/blog/2013/06/05/why-react.html
+
+http://blog.liip.ch/archive/2014/09/16/angularjs-vs-reactjs-for-large-web-applications.html
+http://www.williambrownstreet.net/blog/2014/04/faster-angularjs-rendering-angularjs-and-reactjs/
+http://blog.risingstack.com/from-angularjs-to-react-the-isomorphic-way/
+https://www.codementor.io/reactjs/tutorial/react-vs-angularjs
+https://www.airpair.com/angularjs/posts/angular-vs-react-the-tie-breaker
+http://wiredcraft.com/blog/why-we-may-ditch-angularjs-for-react/
+http://www.quora.com/Pete-Hunt/Posts/Facebooks-React-vs-AngularJS-A-Closer-Look
+
+http://chariotsolutions.com/blog/post/angularjs-2-0-bold-new-step-typed-js-es-6-without-concerns/
+http://jlongster.com/Removing-User-Interface-Complexity,-or-Why-React-is-Awesome
+
+Podcast:
+http://codewinds.com/podcast/004.html
+

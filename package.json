@@ -1,0 +1,17 @@
+{
+  "name": "react_vs_angular_presentation",
+  "version": "1.0.0",
+  "description": "Comparing angular vs react",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "react",
+    "angular",
+    "comparison",
+    "versus"
+  ],
+  "author": "Jonathan Keam",
+  "license": "MIT"
+}
