@@ -166,6 +166,7 @@ Support
 
 AngularJS: http://ngmodules.org/ currently shows an impressive number of 870 modules. Learning resources in the form of courses are available for example form codeschool, egghead and udemy. Lots of companies build their apps with AngularJS (Youtube on PS3, vevo). Support channels can be found on the AngularJS website under 'Discuss'.
 
+
 ReactJS: http://react-components.com/ is growing but with under 100 components not quite there yet. The community compared to AngularJS isn’t too big but with Facebook, Instagram, Vimeo, Github, Yahoo (migrating Yahoo! Mail from YUI to ReactJS), Khan Academy, Netflix, Airbnb, Sony, Atlassian, CodeAcademy there are more companies using it and we see lots of traction. See the support channels when looking for help.
 
 by Adrian Philipp, 

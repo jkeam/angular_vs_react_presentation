@@ -5,6 +5,10 @@ This is a presentation comparing some of the differences between React and Angul
 This slide deck is written in reveal.js.  
 
 1.  Install dependencies
+  ```shell
+  npm install
+  ```
+
 2.  Run the build
 
   ```shell
