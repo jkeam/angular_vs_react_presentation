@@ -16,6 +16,8 @@ This slide deck is written in reveal.js.
   node ./app.js
   ```  
 
+4.  Go to [http://localhost:8000](http://localhost:8000)
+
 ## Development
 To start the watcher that will watch and rebuild your assets whenever you change them, start the dev task.
 
@@ -24,4 +26,5 @@ To start the watcher that will watch and rebuild your assets whenever you change
   ```shell
   gulp dev
   ```
-
+  
+2.  Go to [http://localhost:8000](http://localhost:8000)
