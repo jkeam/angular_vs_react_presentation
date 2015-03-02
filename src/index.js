@@ -5,7 +5,7 @@ Reveal.initialize({
   controls: true,
   progress: true,
   history: true,
-  center: true,
+  center: false,
   // default/cube/page/concave/zoom/linear/fade/none 
-  transition: 'none',
+  transition: 'slide',
 });

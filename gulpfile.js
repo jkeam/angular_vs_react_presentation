@@ -25,6 +25,7 @@ gulp.task('copy', function(){
   //gulp.src('./src/index.js').pipe(gulp.dest('./dist/public'));
   gulp.src('./src/*.css').pipe(gulp.dest('./dist/public'));
   gulp.src('./src/*.png').pipe(gulp.dest('./dist/public'));
+  gulp.src(['./src/league-gothic/**/*']).pipe(gulp.dest('./dist/public/league-gothic'));
 });
 
 
