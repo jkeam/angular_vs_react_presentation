@@ -2,7 +2,7 @@
   "name": "react_vs_angular_presentation",
   "version": "1.0.0",
   "description": "Comparing angular vs react",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -13,5 +13,16 @@
     "versus"
   ],
   "author": "Jonathan Keam",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "handlebars": "^3.0.0",
+    "hapi": "^8.2.0",
+    "reveal": "0.0.4"
+  },
+  "devDependencies": {
+    "gulp": "^3.8.11",
+    "gulp-browserify": "^0.5.1",
+    "gulp-jade": "^1.0.0",
+    "gulp-less": "^3.0.1"
+  }
 }
